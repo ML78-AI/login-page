@@ -5,6 +5,15 @@
 * {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+
+.body-style {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
 .container {
     height: 340px;
     width: 340px;

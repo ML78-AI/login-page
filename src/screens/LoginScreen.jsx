@@ -1,7 +1,7 @@
 import classes from "./styles.module.css";
 import loginImg from "../assets/login.png";
 import eyeImg from "../assets/eye.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const EMAIL = "anais@exemple.com";
@@ -22,6 +22,11 @@ function LoginScreen() {
             setPrintErrorMessageOfConnection(true);
         }
     };
+
+    useEffect(() => {
+        document.body.classList.add(classes["body-style"]);
+        return () => document.body.classList.remove(classes["body-style"]);
+    }, []);
 
     return (
         <div className={classes["container"]}>
