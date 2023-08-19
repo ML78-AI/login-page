@@ -1,0 +1,121 @@
+:root {
+    --main-color: #20c997;
+}
+
+* {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.container {
+    height: 340px;
+    width: 340px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px 2px rgb(230, 230, 230);
+    padding: 40px;
+    font-family: inherit;
+}
+
+.title {
+    margin: 0 0 10px 0;
+    height: 10%;
+    display: flex;
+}
+
+.img {
+    height: 100%;
+    width: 35px;
+    margin-left: 15px;
+}
+
+.info {
+    margin: 0 0 20px 0;
+    color: gray;
+    font-size: 1rem;
+}
+
+.form-data {
+    width: 100%;
+}
+
+.container-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 14px 0;
+}
+
+.label-data {
+    font-weight: 800;
+    margin: 0 0 7px 0;
+}
+
+.field {
+    outline: none;
+    height: 22px;
+    padding: 0;
+    width: 98%;
+    border-radius: 5px;
+    border: 1px solid rgb(121, 119, 119);
+}
+
+.field-error-conn {
+    border-color: red;
+}
+
+.password-container {
+    width: 100%;
+    position: relative;
+}
+
+.password-field {
+    -webkit-text-security: disc;
+}
+
+.unprotected-password-field {
+    -webkit-text-security: none;
+}
+
+.eye-img {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 0.5px;
+    right: 7px;
+    cursor: pointer;
+}
+
+.error-conn {
+    color: red;
+    font-size: 0.8rem;
+    margin: 0 0 10px 0;
+}
+
+.connection-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.auto-connection {
+    display: flex;
+}
+
+.checkbox-autoco {
+    margin-right: 5px;
+}
+
+.forgot-pwd {
+    margin: 0;
+    color: var(--main-color);
+}
+
+.submit-connection {
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    width: 100%;
+    color: white;
+    padding: 15px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
