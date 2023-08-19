@@ -43,7 +43,7 @@ function LoginScreen() {
                     <input
                         type="email"
                         name="mail"
-                        placeholder="adresse@mail.com"
+                        placeholder=" adresse@mail.com"
                         className={`${classes["field"]} ${
                             printErrorMessageOfConnection
                                 ? classes["field-error-conn"]
@@ -76,9 +76,11 @@ function LoginScreen() {
                     </div>
                 </div>
                 {printErrorMessageOfConnection ? (
-                    <p className={classes["error-conn"]}>
-                        Adresse mail ou le mot de passe incorrect.
-                    </p>
+                    <small>
+                        <p className={classes["error-conn"]}>
+                            Adresse mail ou le mot de passe incorrect.
+                        </p>
+                    </small>
                 ) : null}
                 <div className={classes["connection-info"]}>
                     <div className={classes["auto-connection"]}>

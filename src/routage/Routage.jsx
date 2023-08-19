@@ -8,7 +8,7 @@ function Routage() {
         <BrowserRouter>
             <Routes>
                 <Route exact path="/" element={<LoginScreen />} />
-                <Route exact path="/Dashboard" element={<DashboardScreen />} />
+                <Route exact path="/dashboard" element={<DashboardScreen />} />
             </Routes>
         </BrowserRouter>
     );
