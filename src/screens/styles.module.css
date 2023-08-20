@@ -109,6 +109,11 @@
 
 .checkbox-autoco {
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.autoco {
+    cursor: pointer;
 }
 
 .forgot-pwd {
