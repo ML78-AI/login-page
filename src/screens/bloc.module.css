@@ -1,0 +1,28 @@
+.title {
+    text-emphasis: "*" blue;
+}
+.bloc {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.bloc::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: grey;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.bloc:hover::after {
+    opacity: 0.5;
+}
