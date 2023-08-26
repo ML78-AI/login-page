@@ -3,6 +3,7 @@ import loginImg from "../assets/login.png";
 import eyeImg from "../assets/eye.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
 
 const EMAIL = "anais@exemple.com";
 const MDP = "LGBTQIABZUTJDBRS++";
@@ -31,15 +32,17 @@ function LoginScreen() {
     return (
         <div className={classes["container"]}>
             <h1 className={classes["title"]}>
-                Se connecter
+                <FormattedMessage id="connect" />
                 <img src={loginImg} alt="login" className={classes["img"]} />
             </h1>
             <p className={classes["info"]}>
-                Entrez vos identifiants pour accéder à votre espace personnel.
+                <FormattedMessage id="infoConnection" />
             </p>
             <form className={classes["form-data"]}>
                 <div className={classes["container-field"]}>
-                    <h3 className={classes["label-data"]}>Adresse mail</h3>
+                    <h3 className={classes["label-data"]}>
+                        <FormattedMessage id="emailAdress" />
+                    </h3>
                     <input
                         type="email"
                         name="mail"
@@ -52,7 +55,9 @@ function LoginScreen() {
                     />
                 </div>
                 <div className={classes["container-field"]}>
-                    <h3 className={classes["label-data"]}>Mot de passe</h3>
+                    <h3 className={classes["label-data"]}>
+                        <FormattedMessage id="password" />
+                    </h3>
                     <div className={classes["password-container"]}>
                         <input
                             type="text"
@@ -78,7 +83,7 @@ function LoginScreen() {
                 {printErrorMessageOfConnection ? (
                     <small>
                         <p className={classes["error-conn"]}>
-                            Adresse mail ou le mot de passe incorrect.
+                            <FormattedMessage id="wrongCreds" />
                         </p>
                     </small>
                 ) : null}
@@ -90,19 +95,19 @@ function LoginScreen() {
                             className={classes["checkbox-autoco"]}
                         />
                         <label htmlFor="autoco" className={classes["autoco"]}>
-                            Se souvenir de moi
+                            <FormattedMessage id="rememberMe" />
                         </label>
                     </div>
                     <p className={classes["forgot-pwd"]}>
-                        Mot de passe oublié ?
+                        <FormattedMessage id="forgotPassword" />
                     </p>
                 </div>
-                <input
-                    type="submit"
+                <button
                     className={classes["submit-connection"]}
                     onClick={handleClick}
-                    value="Se Connecter"
-                />
+                >
+                    <FormattedMessage id="connection" />
+                </button>
             </form>
         </div>
     );
